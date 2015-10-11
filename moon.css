@@ -1,0 +1,52 @@
+
+.moon {
+  transform: scale(0.7);
+
+    margin-left: 50px;
+    margin-top: 0px;
+
+    margin-right: auto;
+   
+    width: 225px;
+    height: 225px;
+    background-color: #ECF0F1;
+    border-bottom: 25px solid rgba(186, 188, 193, 0.2);
+    border-right: 25px solid rgba(186, 188, 193, 0.2);
+    border-radius: 50%;
+}
+
+.crater {
+    position: absolute;
+    background-color: #BABCC1;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-bottom: 4px solid rgba(125, 133, 145, 0.5);
+    border-left: 4px solid rgba(125, 133, 145, 0.5);
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.crater-2 {
+    position: absolute;
+    background-color: #BABCC1;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-bottom: 4px solid rgba(125, 133, 145, 0.5);
+    border-left: 4px solid rgba(125, 133, 145, 0.5);
+    margin-top: 130px;
+    margin-left: 20px;
+}
+
+.crater-3 {
+    position: absolute;
+    background-color: #BABCC1;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border-bottom: 4px solid rgba(125, 133, 145, 0.5);
+    border-left: 4px solid rgba(125, 133, 145, 0.5);
+    margin-top: 170px;
+    margin-left: 170px;
+}

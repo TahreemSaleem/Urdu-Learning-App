@@ -1,0 +1,377 @@
+#slider-outer 
+	{
+	 	max-width:40em; 
+	 	margin:auto; 
+	 	position:relative; 
+	 	line-height:1.75em; 
+	 	padding:1.25em 
+	 } /* change padding to move arrows */
+#slider 
+	{
+
+		top: 100px;
+	 	display:block;
+	 	overflow:hidden; 
+	 	border:1px solid #ccc 
+	}
+#slider-outer .slide-check 
+	{
+		position:absolute;
+		left:-9999px 
+	}
+
+#slider .slides 
+	{ 
+		width:3700% 
+	} /* #### (slides x 100) #### */
+#slider .slides > div 
+	{
+		width:2.702%; /* #### (100 / slides) #### */
+		float:left; 
+		overflow:hidden; position:relative; 
+		-webkit-transform:translate3d(0,0,0); /* http://davidwalsh.name/translate3d */
+		-webkit-transition:-webkit-transform .5s ease-in-out; transition:transform .5s ease-in-out
+	}
+
+#slider-outer .arrows 
+	{ 
+		font:1em/2em Arial; 
+		text-indent:0.1875em; 
+		text-align:center; 
+		position:absolute; 
+		display:none; 
+		z-index:9999; 
+		bottom:1px; 
+		color:#fff; 
+		background:#222; 
+		width:2em; 
+		border-radius:2em; 
+		border:3px solid #fff; 
+		cursor:pointer; 
+		box-shadow:0 0 0 1px rgb(153,153,153)
+	}
+
+				/* #### - define ids of checked buttons/arrows here - #### going forward*/
+#btn-goto-first:checked ~ #arrow-1, 
+#btn-1:checked ~ #arrow-2, 
+#btn-2:checked ~ #arrow-3,
+#btn-3:checked ~ #arrow-4, 
+#btn-4:checked ~ #arrow-5,
+#btn-5:checked ~ #arrow-6,  
+#btn-6:checked ~ #arrow-7,
+#btn-7:checked ~ #arrow-8, 
+#btn-8:checked ~ #arrow-9, 
+#btn-9:checked ~ #arrow-10, 
+#btn-10:checked ~ #arrow-11,  
+#btn-11:checked ~ #arrow-12, 
+#btn-12:checked ~ #arrow-13, 
+#btn-13:checked ~ #arrow-14, 
+#btn-14:checked ~ #arrow-15,
+#btn-15:checked ~ #arrow-16, 
+#btn-16:checked ~ #arrow-17,  
+#btn-17:checked ~ #arrow-18, 
+#btn-18:checked ~ #arrow-19, 
+#btn-19:checked ~ #arrow-20, 
+#btn-20:checked ~ #arrow-21, 
+#btn-21:checked ~ #arrow-22, 
+#btn-22:checked ~ #arrow-23, 
+#btn-23:checked ~ #arrow-24, 
+#btn-24:checked ~ #arrow-25, 
+#btn-25:checked ~ #arrow-26, 
+#btn-26:checked ~ #arrow-27, 
+#btn-27:checked ~ #arrow-28, 
+#btn-28:checked ~ #arrow-29, 
+#btn-29:checked ~ #arrow-30, 
+#btn-30:checked ~ #arrow-31, 
+#btn-31:checked ~ #arrow-32, 
+#btn-32:checked ~ #arrow-33, 
+#btn-33:checked ~ #arrow-34, 
+#btn-34:checked ~ #arrow-35, 
+#btn-35:checked ~ #arrow-36, 
+#btn-36:checked ~ #arrow-37
+ 
+
+	{ /* last button always goes to #arrow-1 */
+		right:1px; display:block
+	}
+
+				/* #### - define ids of checked buttons/arrows here - reposition/rotate '>' arrows to fake '<' arrows - #### */
+#btn-2:checked ~ #arrow-1, 
+#btn-3:checked ~ #arrow-2,
+#btn-4:checked ~ #arrow-3, 
+#btn-5:checked ~ #arrow-4, 
+#btn-6:checked ~ #arrow-5,
+#btn-7:checked ~ #arrow-6,
+#btn-8:checked ~ #arrow-7,
+#btn-9:checked ~ #arrow-8,  
+#btn-10:checked ~ #arrow-9,
+#btn-11:checked ~ #arrow-10,
+#btn-12:checked ~ #arrow-11,
+#btn-13:checked ~ #arrow-12,
+#btn-14:checked ~ #arrow-13,
+#btn-15:checked ~ #arrow-14,
+#btn-16:checked ~ #arrow-15,
+#btn-17:checked ~ #arrow-16,
+#btn-18:checked ~ #arrow-17,
+#btn-19:checked ~ #arrow-18,
+#btn-20:checked ~ #arrow-19,
+#btn-21:checked ~ #arrow-20,
+#btn-22:checked ~ #arrow-21,
+#btn-23:checked ~ #arrow-22,
+#btn-24:checked ~ #arrow-23,
+#btn-25:checked ~ #arrow-24,
+#btn-26:checked ~ #arrow-25,
+#btn-27:checked ~ #arrow-26,
+#btn-28:checked ~ #arrow-27,
+#btn-29:checked ~ #arrow-28,
+#btn-30:checked ~ #arrow-29,
+#btn-31:checked ~ #arrow-30,
+#btn-32:checked ~ #arrow-31,
+#btn-33:checked ~ #arrow-32,
+#btn-34:checked ~ #arrow-33,
+#btn-35:checked ~ #arrow-34,
+#btn-36:checked ~ #arrow-35,
+#btn-37:checked ~ #arrow-36
+
+	{ /* #btn-1 always goes to last arrow */
+		left:1px; display:block; -webkit-transform:scale(-1,1); -ms-transform:scale(-1,1); transform:scale(-1,1);
+	}
+
+				/* #### - define ids of checked buttons/arrows here - (% increment per slide) - move slides when checked - #### */
+#slider-outer #btn-1:checked ~ #slider .slides > div, #slider #btn-goto-first:checked ~ #slider .slides > div 
+	{
+	 	-webkit-transform:translate(0,0); 
+	 	-ms-transform:translate(0,0); 
+	 	transform:translate(0,0) 
+	}
+#slider-outer #btn-2:checked ~ #slider .slides > div 
+	{
+	 	-webkit-transform:translate(-100%,0); 
+	 	-ms-transform:translate(-100%,0); 
+	 	transform:translate(-100%,0) 
+	}
+#slider-outer #btn-3:checked ~ #slider .slides > div 
+	{ 
+		-webkit-transform:translate(-200%,0); 
+		-ms-transform:translate(-200%,0); 
+		transform:translate(-200%,0) 
+	}
+#slider-outer #btn-4:checked ~ #slider .slides > div 
+	{
+	 	-webkit-transform:translate(-300%,0);
+	 	-ms-transform:translate(-300%,0);
+	 	transform:translate(-300%,0) 
+	}
+#slider-outer #btn-5:checked ~ #slider .slides > div 
+	{
+	 	-webkit-transform:translate(-400%,0);
+	 	-ms-transform:translate(-400%,0);
+	 	transform:translate(-400%,0) 
+	}
+/*#slider-outer #btn-6:checked ~ #slider .slides > div, #slider #btn-goto-last:checked ~ #slider .slides > div 
+	*/
+#slider-outer #btn-6:checked ~ #slider .slides > div 
+	{
+	 	-webkit-transform:translate(-500%,0);
+	 	-ms-transform:translate(-500%,0); 
+	 	transform:translate(-500%,0) 
+	}
+#slider-outer #btn-7:checked ~ #slider .slides > div 
+	{
+	 	-webkit-transform:translate(-600%,0);
+	 	-ms-transform:translate(-600%,0); 
+	 	transform:translate(-600%,0) 
+	}
+#slider-outer #btn-8:checked ~ #slider .slides > div 
+	{
+	 	-webkit-transform:translate(-700%,0);
+	 	-ms-transform:translate(-700%,0); 
+	 	transform:translate(-700%,0) 
+	}
+	#slider-outer #btn-9:checked ~ #slider .slides > div 
+	{
+	 	-webkit-transform:translate(-800%,0);
+	 	-ms-transform:translate(-800%,0); 
+	 	transform:translate(-800%,0) 
+	}
+#slider-outer #btn-10:checked ~ #slider .slides > div 
+	{
+	 	-webkit-transform:translate(-900%,0);
+	 	-ms-transform:translate(-900%,0); 
+	 	transform:translate(-900%,0) 
+	}
+#slider-outer #btn-11:checked ~ #slider .slides > div 
+	{
+	 	-webkit-transform:translate(-1000%,0);
+	 	-ms-transform:translate(-1000%,0); 
+	 	transform:translate(-1000%,0) 
+	}
+#slider-outer #btn-12:checked ~ #slider .slides > div 
+	{
+	 	-webkit-transform:translate(-1100%,0);
+	 	-ms-transform:translate(-1100%,0); 
+	 	transform:translate(-1100%,0) 
+	}
+#slider-outer #btn-13:checked ~ #slider .slides > div 
+	{
+	 	-webkit-transform:translate(-1200%,0);
+	 	-ms-transform:translate(-1200%,0); 
+	 	transform:translate(-1200%,0) 
+	}
+#slider-outer #btn-14:checked ~ #slider .slides > div 
+	{
+	 	-webkit-transform:translate(-1300%,0);
+	 	-ms-transform:translate(-1300%,0); 
+	 	transform:translate(-1300%,0) 
+	}
+/*#slider-outer #btn-15:checked ~ #slider .slides > div, #slider #btn-goto-last:checked ~ #slider .slides > div */
+
+#slider-outer #btn-15:checked ~ #slider .slides > div
+{
+	 	-webkit-transform:translate(-1400%,0);
+	 	-ms-transform:translate(-1400%,0); 
+	 	transform:translate(-1400%,0) 
+}
+#slider-outer #btn-16:checked ~ #slider .slides > div
+{
+	 	-webkit-transform:translate(-1500%,0);
+	 	
+	 	transform:translate(-1500%,0) 
+}
+
+#slider-outer #btn-17:checked ~ #slider .slides > div
+{
+	 	-webkit-transform:translate(-1600%,0);
+	 	
+	 	transform:translate(-1600%,0) 
+}
+
+#slider-outer #btn-18:checked ~ #slider .slides > div
+{
+	 	-webkit-transform:translate(-1700%,0);
+	 	
+	 	transform:translate(-1700%,0) 
+}
+
+#slider-outer #btn-19:checked ~ #slider .slides > div
+{
+	 	-webkit-transform:translate(-1800%,0);
+	 	
+	 	transform:translate(-1800%,0) 
+}
+
+#slider-outer #btn-20:checked ~ #slider .slides > div
+{
+	 	-webkit-transform:translate(-1900%,0);
+	 	
+	 	transform:translate(-1900%,0) 
+}
+
+#slider-outer #btn-21:checked ~ #slider .slides > div
+{
+	 	-webkit-transform:translate(-2000%,0);
+	 	
+	 	transform:translate(-2000%,0) 
+}
+
+#slider-outer #btn-22:checked ~ #slider .slides > div
+{
+	 	-webkit-transform:translate(-2100%,0);
+	 	 
+	 	transform:translate(-2100%,0) 
+}
+
+#slider-outer #btn-23:checked ~ #slider .slides > div
+{
+	 	-webkit-transform:translate(-2200%,0);
+	 	
+	 	transform:translate(-2200%,0) 
+}
+
+
+#slider-outer #btn-24:checked ~ #slider .slides > div
+{
+	 	-webkit-transform:translate(-2300%,0);
+	 	
+	 	transform:translate(-2300%,0) 
+}
+#slider-outer #btn-25:checked ~ #slider .slides > div
+{
+	 	-webkit-transform:translate(-2400%,0);
+	 	
+	 	transform:translate(-2400%,0) 
+}
+
+#slider-outer #btn-26:checked ~ #slider .slides > div
+{
+	 	-webkit-transform:translate(-2500%,0);
+	 	
+	 	transform:translate(-2500%,0) 
+}
+#slider-outer #btn-27:checked ~ #slider .slides > div
+{
+	 	-webkit-transform:translate(-2600%,0);
+	 	
+	 	transform:translate(-2600%,0) 
+}
+#slider-outer #btn-28:checked ~ #slider .slides > div
+{
+	 	-webkit-transform:translate(-2700%,0);
+	 	
+	 	transform:translate(-2700%,0) 
+}
+#slider-outer #btn-29:checked ~ #slider .slides > div
+{
+	 	-webkit-transform:translate(-2800%,0);
+	 	
+	 	transform:translate(-2800%,0) 
+}
+#slider-outer #btn-30:checked ~ #slider .slides > div
+{
+	 	-webkit-transform:translate(-2900%,0);
+	 	
+	 	transform:translate(-2900%,0) 
+}
+#slider-outer #btn-31:checked ~ #slider .slides > div
+{
+	 	-webkit-transform:translate(-3000%,0);
+	 	
+	 	transform:translate(-3000%,0) 
+}
+#slider-outer #btn-32:checked ~ #slider .slides > div
+{
+	 	-webkit-transform:translate(-3100%,0);
+	 	
+	 	transform:translate(-3100%,0) 
+}
+#slider-outer #btn-33:checked ~ #slider .slides > div
+{
+	 	-webkit-transform:translate(-3200%,0);
+	 	
+	 	transform:translate(-3200%,0) 
+}
+#slider-outer #btn-34:checked ~ #slider .slides > div
+{
+	 	-webkit-transform:translate(-3300%,0);
+	 	
+	 	transform:translate(-3300%,0) 
+}
+#slider-outer #btn-35:checked ~ #slider .slides > div
+{
+	 	-webkit-transform:translate(-3400%,0);
+	 	
+	 	transform:translate(-3400%,0) 
+}
+#slider-outer #btn-36:checked ~ #slider .slides > div
+{
+	 	-webkit-transform:translate(-3500%,0);
+	 	
+	 	transform:translate(-3500%,0) 
+}
+#slider-outer #btn-37:checked ~ #slider .slides > div
+{
+	 	-webkit-transform:translate(-3600%,0);
+	 	
+	 	transform:translate(-3600%,0) 
+}
+

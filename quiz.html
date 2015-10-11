@@ -1,0 +1,712 @@
+<html ><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+<title>Quiz</title>
+<link rel="stylesheet" type="text/css" href="fan-round.css" />
+<link rel="stylesheet" type="text/css" href="bulb.css" />
+<link rel="stylesheet" type="text/css" href="Slider.css" />
+<link rel="stylesheet" type="text/css" href="Butterfly.css" />
+<link rel="stylesheet" type="text/css" href="truck.css" />
+<link rel="stylesheet" type="text/css" href="fruit.css" />
+<link rel="stylesheet" type="text/css" href="plane.css" />
+<link rel="stylesheet" type="text/css" href="moon.css" />
+<link rel="stylesheet" type="text/css" href="letter.css" />
+<link rel="stylesheet" type="text/css" href="box.css" />
+<link rel="stylesheet" type="text/css" href="earth.css" />
+<link rel="stylesheet" type="text/css" href="sun.css" />
+<link rel="stylesheet" type="text/css" href="balloon.css" />
+<link rel="stylesheet" type="text/css" href="camera.css" />
+<link rel="stylesheet" type="text/css" href="hammer.css" />
+<style>
+/* Slider is from Beverley Hooton @ Focus on Function Web Design */
+body { 		
+			background-color: #fff; 
+			background-image: 
+			
+			linear-gradient(#eee .1em, transparent .1em);
+			background-size: 100% 1.2em;
+			animation:none;
+	 } 
+
+
+.header 
+	{
+    	font-size: 400%;
+    	position: absolute;
+    	top :20px;
+    	left: 43%;
+    	margin-bottom: 0px;
+		font: bold 80px "Century Schoolbook", Georgia, Times, serif;
+		background: -webkit-linear-gradient(90deg, #fc00ff 10%, #00dbde 90%); /* Chrome 10+, Saf5.1+ */
+		-webkit-background-clip: text;
+  		-webkit-text-fill-color: transparent;
+		line-height: 90%;
+		margin: .2em 0 .4em 0;
+		letter-spacing: -2px;
+
+		text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+		             0px 8px 13px rgba(0,0,0,0.1),
+		             0px 18px 23px rgba(0,0,0,0.1);
+	}
+	.Urdu
+  {
+        position: absolute;
+        font-size: 900%;
+        padding-top: 0px;
+        margin-bottom: 0px;
+    padding-right: 150px;
+    margin-top: 130px;
+      height:150px;
+      -webkit-transition: 1s ease-in-out;
+    }
+ .Urdu:hover
+  {    
+    transform: scale(1.2);
+  }
+#alpha1
+  {
+        position: absolute;
+        top: 50%;
+        width: 630px;
+        border: 10px solid #373B44;
+        height: 380px;
+    }
+    .wrong{
+        border-style:groove;
+        border-color: #dc2430;
+        border-width: 5px;
+        
+
+    }
+    .correct{
+        border-style:groove;
+        border-color: #24FE41;
+        border-width: 5px;
+      
+
+    }
+ .egg 
+	{
+		position: absolute;
+		-webkit-box-sizing: content-box;
+		-moz-box-sizing: content-box;
+		box-sizing: content-box;
+		width: 126px;
+		height: 180px;
+		border: none;
+		-webkit-border-radius: 50% / 60% 60% 40% 40%;
+		border-radius: 50% / 60% 60% 40% 40%;
+		font: normal 100%/normal Arial, Helvetica, sans-serif;
+		color: rgba(0,0,0,1);
+		-o-text-overflow: clip;
+		text-overflow: clip;
+		background: #FFF5C3;
+		-webkit-transform: rotateZ(30deg)   ;
+		transform: rotateZ(30deg)   ;
+		top: 55px;
+		left:90px;
+	}
+</style>
+
+
+<body>
+
+<div>
+<p class ="header" lang="ur" style="
+    
+    height: 80px;
+">
+	 ٹیسٹ
+</p>
+</div>
+<img src="d1.png" width="400px" height="400px" style ="opacity:0.5;position:absolute; top:0%;left:70%">
+<img src="d2.png" width="600px" height="500px" style ="opacity:0.5;position:absolute; top :25%;  ">
+
+<div class="page-content">
+
+<div id="slider-outer">
+
+	<input type="radio" id="btn-goto-last" class="slide-check" name="slider">
+	<input type="radio" id="btn-1" class="slide-check" name="slider" checked="checked">
+	<input type="radio" id="btn-2" class="slide-check" name="slider">
+	<input type="radio" id="btn-3" class="slide-check" name="slider">
+	<input type="radio" id="btn-4" class="slide-check" name="slider">
+	<input type="radio" id="btn-5" class="slide-check" name="slider">
+	<input type="radio" id="btn-6" class="slide-check" name="slider">
+	<input type="radio" id="btn-7" class="slide-check" name="slider">
+	<input type="radio" id="btn-8" class="slide-check" name="slider">
+	<input type="radio" id="btn-9" class="slide-check" name="slider">
+	<input type="radio" id="btn-10" class="slide-check" name="slider">
+	<input type="radio" id="btn-goto-first" class="slide-check" name="slider">
+
+	<label for="btn-goto-last" id="arrow-goto-last" class="arrows" onclick="">►</label>
+	<label for="btn-1" id="arrow-1" class="arrows" onclick="">►</label>
+	<label for="btn-2" id="arrow-2" class="arrows" onclick="">►</label>
+	<label for="btn-3" id="arrow-3" class="arrows" onclick="">►</label>
+	<label for="btn-4" id="arrow-4" class="arrows" onclick="">►</label>
+	<label for="btn-5" id="arrow-5" class="arrows" onclick="">►</label>
+	<label for="btn-6" id="arrow-6" class="arrows" onclick="">►</label>
+	<label for="btn-7" id="arrow-7" class="arrows" onclick="">►</label>
+	<label for="btn-8" id="arrow-8" class="arrows" onclick="">►</label>
+	<label for="btn-9" id="arrow-9" class="arrows" onclick="">►</label>
+	<label for="btn-10" id="arrow-10" class="arrows" onclick="">►</label>
+
+
+
+	<label for="btn-goto-first" id="arrow-goto-first" class="arrows" onclick="">►</label>
+
+	<div id="slider" style=" margin-top: 140px; height: 400px;  width: 650px;">
+		<div class="slides">
+				<div id ="alpha1" style =" top: 30%; width:630px;
+  
+					  background: -webkit-linear-gradient(90deg, #00C9FF 10%, #92FE9D 90%); /* Chrome 10+, Saf5.1+ */
+					  background:    -moz-linear-gradient(90deg, #00C9FF 10%, #92FE9D 90%); /* FF3.6+ */
+					  background:     -ms-linear-gradient(90deg, #00C9FF 10%, #92FE9D 90%); /* IE10 */
+					  
+					  
+     ">
+              <div dir="rtl" >
+             <p lang="ur" class="Urdu" style="font-size: 600%; margin-top: 40px;padding-right: 0px;margin-right: 140px;left: 260px;">ش</p>
+                 </div>
+                 
+                  <div>
+                    <div dir="rtl" onclick="this.className='wrong';return false;" style="cursor: pointer;position:absolute; margin-left: 100px;margin-top: 120px;width: 150px;height: 120px;" >
+                     <img src="ruby.png" width="200px" height="200px" style="position: absolute;width: 150px;height: 120px;">
+                      </div>
+
+                      <div dir="rtl" onclick="this.className='correct';return false;" style="cursor: pointer;position:absolute; margin-left: 370px;margin-top: 120px;width: 150px;height: 120px;" >
+                      <img src="lion.png" width="200px" height="200px" style="width: 150px;height: 120px;">
+                      </div>
+
+                      <div dir="rtl" onclick="this.className='wrong';return false;" style="cursor: pointer;position:absolute; margin-left: 100px;margin-top: 260px;width: 150px;height: 120px;" >
+                    <img src="old.png" width="200px" height="200px" style="width: 150px;height: 120px;">
+                      </div>
+
+                      <div dir="rtl" onclick="this.className='wrong';return false;" style="cursor: pointer;position:absolute; margin-left: 370px;margin-top: 260px;width: 150px;height: 120px;" >
+                    <img src="brain.png" width="200px" height="200px" style="width: 150px;height: 120px;">
+                      </div>
+        </div>
+               
+</div>
+<div id ="alpha1" style =" top: 30%; width:630px;
+  
+           
+  background: -webkit-linear-gradient(90deg, #FDFC47 10%, #24FE41 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #FDFC47 10%, #24FE41 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #FDFC47 10%, #24FE41 90%); /* IE10 */
+  background:      -o-linear-gradient(90deg, #FDFC47 10%, #24FE41 90%); /* Opera 11.10+ */
+  background:         linear-gradient(90deg, #FDFC47 10%, #24FE41 90%); /* W3C */
+        
+            
+     ">
+              <div dir="rtl" >
+             <p lang="ur" class="Urdu" style="font-size: 600%; margin-top: 40px;padding-right: 0px;margin-right: 140px;left: 260px;">گ</p>
+                 </div>
+                 
+                  <div>
+                    <div dir="rtl" onclick="this.className='correct';return false;" style="cursor: pointer;position:absolute; margin-left: 100px;margin-top: 100px;width: 150px;height: 120px;" >
+                     <img src="carrot.png" width="200px" height="200px" style="position: absolute;width: 150px;height: 120px;">
+                      </div>
+
+                      <div dir="rtl" onclick="this.className='wrong';return false;" style="cursor: pointer;position:absolute; margin-left: 370px;margin-top: 100px;width: 150px;height: 120px;" >
+                      <img src="axe.png" width="200px" height="200px" style="width: 150px;height: 120px;">
+                      </div>
+
+                      <div dir="rtl" onclick="this.className='wrong';return false;" style="cursor: pointer;position:absolute; margin-left: 100px;margin-top: 240px;width: 150px;height: 120px;" >
+                    <img src="football.png" width="200px" height="200px" style="width: 150px;height: 120px;">
+                      </div>
+
+                      <div dir="rtl" onclick="this.className='wrong';return false;" style="cursor: pointer;position:absolute; margin-left: 370px;margin-top: 240px;width: 150px;height: 120px;" >
+                    <img src="chest.png" width="200px" height="200px" style="width: 150px;height: 120px;">
+                      </div>
+        </div>
+               
+</div>
+<div id ="alpha1" style =" top: 30%; width:630px;
+  
+  
+  background: -webkit-linear-gradient(90deg, #83a4d4 10%, #b6fbff 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #83a4d4 10%, #b6fbff 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #83a4d4 10%, #b6fbff 90%); /* IE10 */
+  background:      -o-linear-gradient(90deg, #83a4d4 10%, #b6fbff 90%); /* Opera 11.10+ */
+  background:         linear-gradient(90deg, #83a4d4 10%, #b6fbff 90%); /* W3C */
+        
+            
+     ">
+              <div dir="rtl" >
+             <p lang="ur" class="Urdu" style="font-size: 600%; margin-top: 40px;padding-right: 0px;margin-right: 140px;left: 260px;">پ</p>
+                 </div>
+                 
+                  <div>
+                    <div dir="rtl" onclick="this.className='wrong';return false;" style="cursor: pointer;position:absolute; margin-left: 100px;margin-top: 100px;width: 150px;height: 120px;" >
+                      <img src="lemon.png" width="200px" height="200px" style="width: 150px;height: 120px;">
+                      </div>
+
+                      <div dir="rtl" onclick="this.className='wrong';return false;" style="cursor: pointer;position:absolute; margin-left: 370px;margin-top: 100px;width: 150px;height: 120px;" >
+                      <img src="hail.png" width="200px" height="200px" style="width: 150px;height: 120px;">
+                      </div>
+
+                      <div dir="rtl" onclick="this.className='wrong';return false;" style="cursor: pointer;position:absolute; margin-left: 100px;margin-top: 240px;width: 150px;height: 120px;" >
+                    <img src="mirror.png" width="200px" height="200px" style="width: 150px;height: 120px;">
+                      </div>
+
+                      <div dir="rtl" onclick="this.className='correct';return false;" style="cursor: pointer;position:absolute; margin-left: 370px;margin-top: 240px;width: 150px;height: 120px;" >
+                     <div class="fan" style=" top:0px; left:0px; position:absolute; width: 150px;height: 120px;transform:scale(0.3);">
+                      <div class="blades">
+                        <div class="blade1"></div>
+                        <div class="blade2"></div>
+                        <div class="blade3"></div>
+                        <div class="blade4"></div>
+                        <div class="center"></div>
+                      </div>  <!--  Close Blades -->
+                        
+                      <div class="grid">
+                        <div class="grid1"></div>
+                        <div class="grid2"></div>
+                        <div class="grid3"></div>
+                        <div class="grid4"></div>
+                        <div class="grid5"></div>
+                        <div class="upright1"></div>
+                        <div class="upright2"></div>
+                        <div class="upright3"></div>
+                      </div> <!--  Close Grid -->
+                    </div> <!--  Close Fan -->
+                      </div>
+        </div>
+               
+</div>
+  <div id ="alpha1" style =" top: 30%; width:630px;
+  
+  
+   background: -webkit-linear-gradient(90deg, #f857a6 10%, #ff5858 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #f857a6 10%, #ff5858 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #f857a6 10%, #ff5858 90%); /* IE10 */   
+     ">
+              <div dir="rtl" >
+             <p lang="ur" class="Urdu" style="font-size: 600%; margin-top: 40px;padding-right: 0px;margin-right: 140px;left: 260px;">ہ</p>
+                 </div>
+                 
+                  <div>
+                    <div dir="rtl" onclick="this.className='wrong';return false;" style="cursor: pointer;position:absolute; margin-left: 100px;margin-top: 100px;width: 150px;height: 120px;" >
+                      <img src="yak.png" width="200px" height="200px" style="width: 150px;height: 120px;">
+                      </div>
+
+                      <div dir="rtl" onclick="this.className='wrong';return false;" style="cursor: pointer;position:absolute; margin-left: 370px;margin-top: 100px;width: 150px;height: 120px;" >
+                     <div id="apple" style="z-index:0;"></div>
+                      </div>
+
+                      <div dir="rtl" onclick="this.className='correct';return false;" style="cursor: pointer;position:absolute; margin-left: 100px;margin-top: 240px;width: 150px;height: 120px;" >
+                    <div class="hammertime" style="transform:scale(0.7);
+                        margin-left: 0px;
+                        margin-top: 0px;
+                        margin-right: 0px;
+                        padding-bottom: 0px;
+                        left: 50px;
+                    ">
+                            <div class="hammer left_h"><div class="head_h"></div></div>
+                            <div class="hammer right_h"><div class="head_h"></div></div>
+                            <div class="target"></div>
+                          </div>
+                      </div>
+                      <div dir="rtl" onclick="this.className='wrong';return false;" style="cursor: pointer;position:absolute; margin-left: 370px;margin-top: 240px;width: 150px;height: 120px;" >
+                 <div id="bb" style="
+                    margin-bottom: 0px;
+                    width: 300px;
+                    height: 20px;
+                    margin-left: 0px;
+                    margin-top: 0px;
+                    left: 160px;
+                    transform:scale(0.5);
+                ">
+                  
+                  <div class="balloon"></div>
+                  </div>
+
+        </div>
+               
+
+</div>
+</div>
+<div id ="alpha1" style =" top: 30%; width:630px;
+  
+  
+
+
+  background: -webkit-linear-gradient(90deg, #AAFFA9 10%, #11FFBD 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #AAFFA9 10%, #11FFBD 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #AAFFA9 10%, #11FFBD 90%); /* IE10 */
+  background:      -o-linear-gradient(90deg, #AAFFA9 10%, #11FFBD 90%); /* Opera 11.10+ */
+  background:         linear-gradient(90deg, #AAFFA9 10%, #11FFBD 90%); /* W3C */
+        
+   ">
+              <div dir="rtl" >
+             <p lang="ur" class="Urdu" style="font-size: 600%; margin-top: 40px;padding-right: 0px;margin-right: 140px;left: 260px;">خ</p>
+                 </div>
+                 
+                  <div>
+                    <div dir="rtl" onclick="this.className='wrong';return false;" style="cursor: pointer;position:absolute; margin-left: 100px;margin-top: 100px;width: 150px;height: 120px;" >
+                      <img src="glasses.png" width="200px" height="200px" style="width: 150px;height: 120px;">
+                      </div>
+
+                      <div dir="rtl" onclick="this.className='correct';return false;" style="cursor: pointer;position:absolute; margin-left: 370px;margin-top: 100px;width: 150px;height: 120px;" >
+                     
+                       <div id="wrapper" style="
+                      width: 100px;
+                      height: 150px;
+                      margin-left: 0px;
+                      margin-bottom: 200px;
+                      margin-top: 50px;
+                  ">
+                  <div class="anvelopebg"></div>
+                  <div class="anvelope"></div>  
+                  <div class="opener"></div>
+                  <div class="letter" style="
+                        left: -10;
+                        left: 0px;
+                        margin-left: 0px;
+                        margin-right: 5px;
+                    "></div>
+                </div>
+                 
+                      </div>
+
+                      <div dir="rtl" onclick="this.className='wrong';return false;" style="cursor: pointer;position:absolute; margin-left: 100px;margin-top: 240px;width: 150px;height: 120px;" >
+                   <img src="hookah.png" width="200px" height="200px" style="width: 150px;height: 120px;">
+                      </div>
+                      <div dir="rtl" onclick="this.className='wrong';return false;" style="cursor: pointer;position:absolute; margin-left: 370px;margin-top: 240px;width: 150px;height: 120px;" >
+                <div class="container" style = "transform:scale(0.25) ; position: absolute; top :-190px ;left:-70px">
+           
+              <div id="bulb" style ="left:330px;">
+                <div class="bulb-top">
+                <div class="reflection_bulb"></div>
+                </div>
+                <div class="bulb-middle-1"></div>
+                <div class="bulb-middle-2"></div>
+                <div class="bulb-middle-3"></div>
+                <div class="bulb-bottom"></div>
+              </div>
+                
+              <div id="base_bulb">
+                <div class="screw-top"></div>
+                <div class="screw-a"></div>
+                <div class="screw-b"></div>
+                <div class="screw-a"></div>
+                <div class="screw-b"></div>
+                <div class="screw-a"></div>
+                <div class="screw-b"></div>
+                <div class="screw-c"></div>
+                <div class="screw-d"></div>
+              </div>
+            </a>
+          </div>
+
+        </div>
+               
+
+</div>
+</div>
+          <div id ="alpha1" style =" top: 30%; width:630px;
+  
+  
+
+
+ 
+  background: -webkit-linear-gradient(90deg, #fc00ff 10%, #00dbde 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #fc00ff 10%, #00dbde 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #fc00ff 10%, #00dbde 90%); /* IE10 */
+ 
+   ">
+              <div dir="rtl" >
+             <p lang="ur" class="Urdu" style="font-size: 600%; margin-top: 40px;padding-right: 0px;margin-right: 140px;left: 260px;">ف</p>
+                 </div>
+                 
+                  <div>
+                    <div dir="rtl" onclick="this.className='wrong';return false;" style="cursor: pointer;position:absolute; margin-left: 100px;margin-top: 100px;width: 150px;height: 120px;" >
+                      <div id="page" style ="transform:scale(0.5);left: -30px;top: 10px;">
+                <div class="shadow-wrapper" >
+                  <div class="shadow_box">
+                    <div></div>
+                  </div>
+                </div>
+                <div class="box-wrapper">
+                  <div class="box">
+                    <div class="front_box">
+                      
+                    </div>
+                    <div class="back_box">
+                      
+                    </div>
+                    <div class="top_box">&nbsp;</div>
+                    <div class="bottom_box">&nbsp;</div>
+                    <div class="left_box">
+                      
+                    </div>
+                    <div class="right_box">
+                      
+                    </div>
+                    
+                  </div><!-- end of .box -->
+                </div><!-- end of .box-wrapper -->
+              </div><!-- end of #page -->
+                      </div>
+
+                      <div dir="rtl" onclick="this.className='correct';return false;" style="cursor: pointer;position:absolute; margin-left: 370px;margin-top: 100px;width: 150px;height: 120px;" >
+                        <img src="football.png" width="200px" height="200px" style="width: 150px;height: 120px;">
+                      </div>
+
+                      <div dir="rtl" onclick="this.className='wrong';return false;" style="cursor: pointer;position:absolute; margin-left: 100px;margin-top: 240px;width: 150px;height: 120px;" >
+                   <img src="old.png" width="200px" height="200px" style="width: 150px;height: 120px;">
+                      </div>
+                      <div dir="rtl" onclick="this.className='wrong';return false;" style="cursor: pointer;position:absolute; margin-left: 370px;margin-top: 240px;width: 150px;height: 120px;" >
+                    <div id="watermelon" style="z-index:0;margin-left: 0px;left: 0px;right: 20px;"></div>
+                       
+
+        </div>
+               
+
+</div>
+</div>
+
+       <div id ="alpha1" style =" top: 30%; width:630px;
+  
+  
+
+
+
+  background: -webkit-linear-gradient(90deg, #EB3349 10%, #F45C43 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #EB3349 10%, #F45C43 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #EB3349 10%, #F45C43 90%); /* IE10 */
+ 
+        
+   ">
+              <div dir="rtl" >
+             <p lang="ur" class="Urdu" style="font-size: 600%; margin-top: 40px;padding-right: 0px;margin-right: 140px;left: 260px;">ر</p>
+                 </div>
+                 
+                  <div>
+                    <div dir="rtl" onclick="this.className='correct';return false;" style="cursor: pointer;position:absolute; margin-left: 100px;margin-top: 100px;width: 150px;height: 120px;" >
+                       <img src="train.png" width="200px" height="200px" style="width: 150px;height: 120px;">
+                      </div>
+
+                      <div dir="rtl" onclick="this.className='wrong';return false;" style="cursor: pointer;position:absolute; margin-left: 370px;margin-top: 100px;width: 150px;height: 120px;" >
+                       <img src="tree.png" width="200px" height="200px" style="width: 150px;height: 120px;">
+                      </div>
+                      <div dir="rtl" onclick="this.className='wrong';return false;" style="cursor: pointer;position:absolute; margin-left: 100px;margin-top: 240px;width: 150px;height: 120px;" >
+                      <div class="sun" style="
+                          
+                          transform:scale(0.7);
+                          left: 0px;
+                          top: 0px;
+                          width: 100px;
+                          height: 100px;
+                          margin-top: 8px;
+                          
+                          ">
+                    <div class="sun-face">
+                        <div class="sun-hlight"></div>
+                        <div class="sun-leye"></div>
+                        <div class="sun-reye"></div>
+                        <div class="sun-lred"></div>
+                        <div class="sun-rred"></div>
+                        <div class="sun-nose"></div>
+                    </div>
+                    <div class="sun-anime">
+                    <div class="sun-ball"></div>
+                    <div class="sun-light">
+                        <b></b>
+                        <s></s>
+                    </div>
+                    <div class="sun-light">
+                        <b></b>
+                        <s></s>
+                    </div>
+                    <div class="sun-light">
+                        <b></b>
+                        <s></s>
+                    </div>
+                    <div class="sun-light">
+                        <b></b>
+                        <s></s>
+                    </div>
+                    <div class="sun-light">
+                        <b></b>
+                        <s></s>
+                    </div>
+                    <div class="sun-light">
+                        <b></b>
+                        <s></s>
+                    </div>
+                    <div class="sun-light">
+                        <b></b>
+                        <s></s>
+                    </div>
+                    <div class="sun-light">
+                        <b></b>
+                        <s></s>
+                    </div>
+                    <div class="sun-light">
+                        <b></b>
+                        <s></s>
+                    </div>
+                    <div class="sun-light">
+                        <b></b>
+                        <s></s>
+                    </div>
+                    <div class="sun-light">
+                        <b></b>
+                        <s></s>
+                    </div>
+                    <div class="sun-light">
+                        <b></b>
+                        <s></s>
+                    </div>
+                </div>
+            </div>
+                
+                      </div>
+                      <div dir="rtl" onclick="this.className='wrong';return false;" style="cursor: pointer;position:absolute; margin-left: 370px;margin-top: 240px;width: 150px;height: 120px;" >
+                   <img src="carrot.png" width="200px" height="200px" style="width: 150px;height: 120px;">
+                       
+
+        </div>
+               
+
+</div>
+</div>
+<div id ="alpha1" style =" top: 30%; width:630px;
+  
+ background: -webkit-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); /* IE10 */
+
+        
+   ">
+              <div dir="rtl" >
+             <p lang="ur" class="Urdu" style="font-size: 600%; margin-top: 40px;padding-right: 0px;margin-right: 140px;left: 260px;">ن</p>
+                 </div>
+                 
+                  <div>
+                    <div dir="rtl" onclick="this.className='wrong';return false;" style="cursor: pointer;position:absolute; margin-left: 100px;margin-top: 100px;width: 150px;height: 120px;" >
+                       <img src="lion.png" width="200px" height="200px" style="width: 150px;height: 120px;">
+                      </div>
+
+                      <div dir="rtl" onclick="this.className='correct';return false;" style="cursor: pointer;position:absolute; margin-left: 370px;margin-top: 100px;width: 150px;height: 120px;" >
+                        <div id="pear" style="
+                      
+                      margin-top: 30px;
+                      margin-left: 0px;
+                      margin-right: 20px;
+                  
+                  "></div>
+
+                      </div>
+                      <div dir="rtl" onclick="this.className='wrong';return false;" style="cursor: pointer;position:absolute; margin-left: 100px;margin-top: 240px;width: 150px;height: 120px;" >
+                       <div id="orange" style="
+                      
+                      margin-top: 20px;
+                      margin-left: 100px;
+                      z-index:0;
+                      margin-right: 20px;
+
+                  "></div>
+                      </div>
+                      <div dir="rtl" onclick="this.className='wrong';return false;" style="cursor: pointer;position:absolute; margin-left: 370px;margin-top: 240px;width: 150px;height: 120px;" >
+                         <img src="shirt.png" width="200px" height="200px" style="width: 150px;height: 120px;">
+                  
+
+                       
+
+        </div>
+               
+
+</div>
+</div>
+<div id ="alpha1" style =" top: 30%; width:630px;
+  
+
+
+  background: -webkit-linear-gradient(90deg, #ED4264 10%, #FFEDBC 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #ED4264 10%, #FFEDBC 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #ED4264 10%, #FFEDBC 90%); /* IE10 */
+ 
+   ">
+              <div dir="rtl" >
+             <p lang="ur" class="Urdu" style="font-size: 600%; margin-top: 40px;padding-right: 0px;margin-right: 140px;left: 260px;">م</p>
+                 </div>
+                 
+                  <div>
+                    <div dir="rtl" onclick="this.className='correct';return false;" style="cursor: pointer;position:absolute; margin-left: 100px;margin-top: 100px;width: 150px;height: 120px;" >
+                       <img src="shirt.png" width="200px" height="200px" style="width: 150px;height: 120px;">
+                      </div>
+
+                      <div dir="rtl" onclick="this.className='wrong';return false;" style="cursor: pointer;position:absolute; margin-left: 370px;margin-top: 100px;width: 150px;height: 120px;" >
+                       <img src="van6.png" width="200px" height="200px" style="width: 150px;height: 120px;">
+
+                      </div>
+                      <div dir="rtl" onclick="this.className='wrong';return false;" style="cursor: pointer;position:absolute; margin-left: 100px;margin-top: 240px;width: 150px;height: 120px;" >
+                          <img src="pottery.png" width="200px" height="200px" style="width: 150px;height: 120px;">
+                      </div>
+                      <div dir="rtl" onclick="this.className='wrong';return false;" style="cursor: pointer;position:absolute; margin-left: 370px;margin-top: 240px;width: 150px;height: 120px;" >
+                         <img src="chest.png" width="200px" height="200px" style="width: 150px;height: 120px;">
+                  
+
+                       
+
+        </div>
+               
+
+</div>
+</div>
+<div id ="alpha1" style =" top: 30%; width:630px;
+  
+
+
+background: -webkit-linear-gradient(90deg, #24C6DC 10%, #514A9D 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #24C6DC 10%, #514A9D 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #24C6DC 10%, #514A9D 90%); /* IE10 */
+ 
+   ">
+              <div dir="rtl" >
+             <p lang="ur" class="Urdu" style="font-size: 600%; margin-top: 40px;padding-right: 0px;margin-right: 140px;left: 260px;">ل</p>
+                 </div>
+                 
+                  <div>
+                    <div dir="rtl" onclick="this.className='wrong';return false;" style="cursor: pointer;position:absolute; margin-left: 100px;margin-top: 100px;width: 150px;height: 120px;" >
+                      <div id="bb" style="
+                    margin-bottom: 0px;
+                    width: 300px;
+                    height: 20px;
+                    margin-left: 0px;
+                    margin-top: 0px;
+                    left: 120px;
+                    transform:scale(0.5);
+                ">
+                  <div class="balloon"></div>
+            </div>
+                      </div>
+
+                      <div dir="rtl" onclick="this.className='correct';return false;" style="cursor: pointer;position:absolute; margin-left: 370px;margin-top: 100px;width: 150px;height: 120px;" >
+                       <img src="lemon.png" width="200px" height="200px" style="width: 150px;height: 120px;">
+
+                      </div>
+                      <div dir="rtl" onclick="this.className='wrong';return false;" style="cursor: pointer;position:absolute; margin-left: 100px;margin-top: 240px;width: 150px;height: 120px;" >
+                          <img src="glasses.png" width="200px" height="200px" style="width: 150px;height: 120px;">
+                      </div>
+                      <div dir="rtl" onclick="this.className='wrong';return false;" style="cursor: pointer;position:absolute; margin-left: 370px;margin-top: 240px;width: 150px;height: 120px;" >
+                         <img src="hail.png" width="200px" height="200px" style="width: 150px;height: 120px;">
+                  
+
+                       
+
+        </div>
+               
+
+</div>
+</div>
+
+
+		</div><!-- closing ".slides" -->
+	</div><!-- closing "#slider" -->
+
+</div><!-- closing "#slider-outer" -->

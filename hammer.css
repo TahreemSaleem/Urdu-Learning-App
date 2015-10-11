@@ -1,0 +1,148 @@
+
+.hammertime {
+	font-size: 80%;
+	position: relative;
+	height: 10.313em;
+	width: 18.750em;
+	padding-bottom: 0.625em;
+	margin: 0.313em 2.500em 0 2.500em;
+}
+.hammer {
+	position: relative;
+	width: 4.063em;
+	height: 10.313em;
+	-moz-transform: translate3d(0,0,0);
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	-moz-transform-origin: 1.875em 8.438em;
+	-webkit-transform-origin: 1.875em 8.438em;
+	transform-origin: 1.875em 8.438em;
+}
+.hammer:before, .hammer:after {
+	display:block;
+	position: absolute;
+	content: "";
+	background: #bf6e4e;
+	background: -moz-linear-gradient(left,  #bf6e4e 0%, #8c3310 50%, #bf6e4e 100%);
+	background: -webkit-linear-gradient(left,  #bf6e4e 0%,#8c3310 50%,#bf6e4e 100%);
+	background: -o-linear-gradient(left,  #bf6e4e 0%,#8c3310 50%,#bf6e4e 100%);
+	background: -ms-linear-gradient(left,  #bf6e4e 0%,#8c3310 50%,#bf6e4e 100%);
+	background: linear-gradient(to right,  #bf6e4e 0%,#8c3310 50%,#bf6e4e 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf6e4e', endColorstr='#bf6e4e',GradientType=1 );
+	left: 1.375em;
+	height: 0.313em;
+	width: 1em;
+}
+.hammer:before {
+	height: 0.313em;
+	top: -0.188em;
+	border-radius: 0.313em;
+	z-index: 1;
+}
+.hammer:after {
+	top: 2.188em;
+	height: 8.125em;
+	border-radius: 0 0 0.313em 0.313em;
+}
+.hammer .head_h {
+	width: 3.750em;
+	height: 2.250em;
+	background: #4c4c4c;
+	background: -moz-linear-gradient(top,  #4c4c4c 0%, #2d2d2d 100%);
+	background: -webkit-linear-gradient(top,  #4c4c4c 0%,#2d2d2d 100%);
+	background: -o-linear-gradient(top,  #4c4c4c 0%,#2d2d2d 100%);
+	background: -ms-linear-gradient(top,  #4c4c4c 0%,#2d2d2d 100%);
+	background: linear-gradient(to bottom,  #4c4c4c 0%,#2d2d2d 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#2d2d2d',GradientType=0 );
+    display:inline-block;
+	position: relative;
+}
+.hammer .head_h:before, .hammer .head_h:after {
+  content: "";
+  position: absolute;
+  height: 1.625em;
+}
+.hammer .head_h:before {
+  border-top: 0.313em solid transparent;
+  border-bottom: 0.313em solid transparent;
+  border-right: 0.313em solid #4c4c4c;
+  left: -0.313em;
+}
+.hammer .head_h:after {
+  border-top: 0.313em solid transparent;
+  border-bottom: 0.313em solid transparent;
+  border-left: 0.313em solid #4c4c4c;
+  right: -0.313em;
+}
+.hammer.left_h {
+	float: left;
+	-moz-animation: spin2 1.2s infinite ease-in;
+	-webkit-animation: spin2 1.2s infinite ease-in;
+	animation: spin2 1.2s infinite ease-in;
+}
+.hammer.right_h {
+	float: right;
+	-moz-animation: spin_h 1.2s infinite ease-in;
+	-webkit-animation: spin_h 1.2s infinite ease-in;
+	animation: spin_h 1.2s infinite ease-in;
+}
+.target {
+	clear: both;
+	position: absolute;
+	display: block;
+	width: 3.750em;
+	height: 0.625em;
+	background: #f00;
+	margin: 0 auto;
+	left:0;
+	right:0;
+	bottom: 0;
+	border-radius: 50% 50% 0 0;
+	-moz-animation: smash .6s infinite;
+	-webkit-animation: smash .6s infinite;
+	animation: smash .6s infinite;
+}
+@-moz-keyframes spin_h{
+  0%{-moz-transform: rotate(-90deg);}
+  50%{-moz-transform: rotate(20deg);}
+  100%{-moz-transform: rotate(-90deg);}
+}
+@-webkit-keyframes spin_h{
+  0%{-webkit-transform: rotate(-90deg);}
+  50%{-webkit-transform: rotate(20deg);}
+  100%{-webkit-transform: rotate(-90deg);}
+}
+@keyframes spin_h{
+  0%{transform: rotate(-90deg);}
+  50%{transform: rotate(20deg);}
+  100%{transform: rotate(-90deg);}
+}
+
+@-moz-keyframes spin2{
+  0%{-moz-transform: rotate(-20deg);}
+  50%{-moz-transform: rotate(90deg);}
+  100%{-moz-transform: rotate(-20deg);}
+}
+@-webkit-keyframes spin2{
+  0%{-webkit-transform: rotate(-20deg);}
+  50%{-webkit-transform: rotate(90deg);}
+  100%{-webkit-transform: rotate(-20deg);}
+}
+@keyframes spin2{
+  0%{transform: rotate(-20deg);}
+  50%{transform: rotate(90deg);}
+  100%{transform: rotate(-20deg);}
+}
+
+@-moz-keyframes smash{
+  0%{background-color: #FFA117;box-shadow: 0 0 0.313em 0.188em rgba(255,0,0,1);}
+  100%{background-color: #FC3715;box-shadow: 0 0 0 0 rgba(255,0,0,1);}
+}
+@-webkit-keyframes smash{
+  0%{background-color: #FFA117;box-shadow: 0 0 0.313em 0.188em rgba(255,0,0,1);}
+  100%{background-color: #FC3715;box-shadow: 0 0 0 0 rgba(255,0,0,1);}
+}
+@keyframes smash{
+  0%{background-color: #FFA117;box-shadow: 0 0 0.313em 0.188em rgba(255,0,0,1);}
+  100%{background-color: #FC3715;box-shadow: 0 0 0 0 rgba(255,0,0,1);}
+}
